@@ -1,29 +1,48 @@
-## Projeto_VHaS
+# 🤖 Projekt VHaS: Vielseitige Handhabungslösung
+> **Kognitive Übersetzung und digitale Inklusion in der deutschen Industrie**
 
-# 🤖 Projeto VHaS - Versatile Handling Solution
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://projetovhs-26042026.streamlit.app/)
 
-Você pode acessar o assistente técnico online aqui:
-[Acesse o VHaS Assistent](https://[seu-link-aqui.streamlit.app/](https://projetovhs-26042026.streamlit.app/)
-Projekte_VHaS Kognitive Übersetzung und digitale Inklusion in der deutschen Industrie
+## 📌 Übersicht
+Dieses Projekt nutzt **Human-Centered AI**, um Industriearbeitern den Zugang zu komplexen technischen Handbüchern zu erleichtern. Durch den Einsatz von **RAG (Retrieval-Augmented Generation)** wandelt das System komplizierte Dokumentationen in einfache, handlungsorientierte Anweisungen um.
 
-Die Herausforderung: Der digitale Graben in der Produktion
+### 🚩 Die Herausforderung: Der digitale Graben
+Die deutsche Industrie steht vor einer kritischen Produktivitätslücke:
+* **Funktionaler Analphabetismus:** Rund 12,1 % der Bevölkerung haben Schwierigkeiten mit komplexen Texten.
+* **Operativer Sektor:** 60 % der Mitarbeiter im operativen Bereich kämpfen mit komplizierter Software.
+* **Risiko:** Bedienfehler, Maschinenstillstände und Sicherheitsrisiken durch zu komplexe Benutzeroberflächen.
 
-Die deutsche Industrie steht derzeit vor einer kritischen Produktivitätslücke, die eng mit der technischen Komplexität moderner Systeme verknüpft ist. Statistiken zeigen, dass 12,1 % der Bevölkerung (ca. 6,2 Millionen Menschen) als funktionale Analphabeten gelten. Im operativen Sektor, der 37 % der Erwerbstätigen umfasst, ist die Lage besonders prekär: 60 % der Mitarbeiter haben erhebliche Schwierigkeiten bei der Interaktion mit industrieller Software. Selbst bei Fachkräften mit abgeschlossener Ausbildung leiden rund 40 % unter zu komplexen Benutzeroberflächen, was zu Bedienfehlern, Maschinenstillständen und Sicherheitsrisiken führt.
+---
 
-Die Lösung: Human-Centered AI (Menschzentrierte KI) Um diese Lücke zu schließen, habe ich eine API für kognitive Übersetzung entwickelt, die auf der RAG-Technik (Retrieval-Augmented Generation) basiert. Das System fungiert als intelligente Ebene, die komplexe technische Dokumentationen und Handbücher abfängt und sie in kurze, praktische und leicht verständliche Anweisungen umwandelt – auf einem Verständnisniveau, das mit dem eines 10-jährigen Kindes vergleichbar ist.
+## 💡 Die Lösung: Menschzentrierte KI
+VHaS fungiert als intelligente Ebene, die technische Dokumentationen abfängt und sie in **leicht verständliche Anweisungen** (Niveau eines 10-jährigen Kindes) übersetzt – direkt am Point of Need.
 
-Technische Architektur und Innovation Das Projekt nutzt einen Technologie-Stack, der auf Effizienz und Konformität mit dem deutschen Datenschutz optimiert ist:
+### Kernfunktionen
+| Funktion | Beschreibung |
+| :--- | :--- |
+| **Vereinfachte Sprache** | Komplexe Begriffe werden in einfache Handlungsanweisungen umgewandelt. |
+| **Mehrsprachigkeit** | Unterstützung für die internationale Belegschaft (Deutsch, Englisch, Polnisch, Türkisch, etc.). |
+| **Echtzeit-Assistenz** | Sofortige Antworten basierend auf den Original-PDF-Handbüchern. |
+| **Adaptive Intelligenz** | Dynamische Anpassung der Sprache an das Profil des Mitarbeiters. |
 
-Orchestrierung und RAG: Implementiert über LangChain. Das System übernimmt das Ingestieren von PDF-Handbüchern, das Text-Slicing (Chunking) und die Erstellung semantischer Vektoren für die Suche.
+---
 
-Embeddings und Datenschutz: Durch den Einsatz von Open-Source-Modellen von Hugging Face (z. B. Sentence-Transformers) werden Embeddings lokal generiert. Dies stellt sicher, dass Betriebsgeheimnisse und sensible Daten innerhalb der Infrastruktur des Kunden verbleiben.
+## 🛠️ Technische Architektur
+Das System ist auf Effizienz und deutschen Datenschutz (DSGVO-Konformität) optimiert:
 
-Hochleistungs-Processing: Um Hardware-Einschränkungen (wie Latenzen bei Celeron-Prozessoren) zu überwinden, erfolgt die Hauptverarbeitung über die Groq Cloud. Der Einsatz von LPUs (Language Processing Units) ermöglicht Antworten in Echtzeit, was für den Arbeitsfluss in der Fabrik essenziell ist.
+* **Orchestrierung:** [LangChain](https://www.langchain.com/) für den RAG-Workflow.
+* **Embeddings & Datenschutz:** Open-Source Modelle von **Hugging Face** stellen sicher, dass sensible Daten lokal verarbeitet werden können.
+* **Hochleistungs-Processing:** Nutzung der **Groq Cloud (LPUs)** für Antwortzeiten in Millisekunden, ideal für den Fabrikalltag.
+* **Vektor-Datenbank:** **FAISS** für hocheffiziente semantische Suche.
+* **Klassifizierung:** Scikit-learn (Logistische Regression) zur Analyse des Schwierigkeitsgrades.
 
-Adaptive Intelligenz: Das System integriert Scikit-learn (Logistische Regression), um den Schwierigkeitsgrad für den Benutzer zu klassifizieren. So passt die API ihre Sprache dynamisch an das Profil des jeweiligen Mitarbeiters an.
+---
 
-Schnittstelle: Der Prototyp wurde mit Gradio und Streamlit entwickelt und bietet eine intuitive Benutzeroberfläche mit Unterstützung für mehrere Sprachen, um der internationalen Belegschaft in Deutschland gerecht zu werden.
+## ⚙️ Installation & Setup
 
-Strategischer Mehrwert Der Kern dieses Projekts liegt nicht nur in der Technologie, sondern in der Workflow-Optimierung. Während herkömmliche Software oft nur die Funktion in den Vordergrund stellt, fokussiert sich meine Lösung auf den Anwender. Durch den Ersatz langwieriger Schulungen durch Echtzeit-Assistenz und die garantierte Einhaltung des Datenschutzes liefern wir ein Werkzeug, das Betriebskosten senkt, die Sicherheit erhöht und die digitale Inklusion im Herzen der deutschen Wirtschaft fördert.
+Befolgen Sie diese Schritte, um das Projekt lokal auszuführen:
 
-Installation Clone das Repository: git clone https://github.com/deu-usuario/projeto-vhs.git Installiere die Abhängigkeiten: pip install -r requirements.txt Erstelle eine .env Datei mit deinem Groq API Key: GROQ_API_KEY=dein_schlüssel_hier Starte die App: streamlit run app.py
+1. **Repository klonen:**
+   ```bash
+   git clone [https://github.com/SEU-USUARIO/projeto-vhs.git](https://github.com/SEU-USUARIO/projeto-vhs.git)
+   cd projeto-vhs
